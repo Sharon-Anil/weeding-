@@ -30,10 +30,13 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.5 }}
-          className="mb-12"
+          className="mb-8"
         >
-          <p className="text-gold font-cursive text-3xl md:text-5xl lg:text-6xl mb-4 drop-shadow-2xl">
+          <p className="text-gold font-cursive text-3xl md:text-5xl lg:text-6xl mb-2 drop-shadow-2xl">
             With the Blessings of the Almighty
+          </p>
+          <p className="text-gold/80 font-serif text-lg md:text-2xl mb-4 tracking-widest">
+            ദൈവകൃപയാൽ
           </p>
           <div className="h-[1px] w-24 bg-gold/50 mx-auto" />
         </motion.div>

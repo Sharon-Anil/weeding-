@@ -68,6 +68,9 @@ function App() {
                 <p className="text-ivory font-cursive text-3xl md:text-4xl opacity-80">
                   Together with our families, we request the honor of your presence.
                 </p>
+                <p className="text-ivory/60 font-serif text-lg md:text-xl italic">
+                  ഞങ്ങളുടെ കുടുംബാംഗങ്ങളോടൊപ്പം നിങ്ങളെ ഏവരെയും സ്നേഹപൂർവ്വം ക്ഷണിച്ചുകൊള്ളുന്നു.
+                </p>
                 
                 <div className="flex flex-col items-center space-y-4 pt-8">
                   <p className="text-gold/60 font-serif italic text-lg">#JerinWedsSneha</p>

@@ -14,7 +14,7 @@ const UnfoldingTransition = () => {
   const skewY = useTransform(scrollYProgress, [0.1, 0.4], [5, 0]);
 
   return (
-    <div ref={containerRef} className="relative min-h-[160vh] bg-maroon perspective-2000 flex items-center justify-center py-20 md:py-32 overflow-hidden">
+    <div ref={containerRef} className="relative min-h-[120vh] bg-maroon perspective-2000 flex items-center justify-center py-20 md:py-32 overflow-hidden">
       {/* Decorative Gold Elements */}
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] opacity-20" />
       
@@ -39,20 +39,25 @@ const UnfoldingTransition = () => {
         {/* Gradient Shadow */}
         <div className="absolute inset-0 bg-gradient-to-t from-maroon via-transparent to-black/40" />
         
-        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-16 lg:p-20 text-center">
+        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12 lg:p-16 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.2 }}
           >
-            <h2 className="text-ivory font-cursive text-4xl md:text-7xl lg:text-8xl mb-4 md:mb-8 drop-shadow-2xl">
+            <h2 className="text-ivory font-cursive text-4xl md:text-7xl lg:text-8xl mb-4 md:mb-6 drop-shadow-2xl">
               An Eternal Promise
             </h2>
-            <div className="h-[1px] w-16 md:w-32 bg-gold mx-auto mb-6 md:mb-10" />
-            <p className="text-ivory/90 font-serif italic text-lg md:text-2xl lg:text-3xl max-w-4xl mx-auto leading-relaxed px-4">
-              "Love is patient, love is kind. It does not envy, it does not boast, it is not proud." <br />
-              <span className="text-gold mt-6 block not-italic font-display text-xs md:text-sm uppercase tracking-[0.4em]">1 Corinthians 13:4</span>
-            </p>
+            <div className="h-[1px] w-16 md:w-32 bg-gold mx-auto mb-6 md:mb-8" />
+            <div className="space-y-6">
+              <p className="text-ivory/90 font-serif italic text-lg md:text-2xl lg:text-3xl max-w-4xl mx-auto leading-relaxed px-4">
+                "Love is patient, love is kind. It does not envy, it does not boast, it is not proud."
+              </p>
+              <p className="text-ivory/80 font-serif text-base md:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed px-4">
+                "സ്നേഹം ദീർഘമായി ക്ഷമിക്കുന്നു; സ്നേഹം ദയ കാണിക്കുന്നു; സ്നേഹം ഈർഷ്യപ്പെടുന്നില്ല; സ്നേഹം നിഗളിക്കുന്നില്ല."
+              </p>
+              <span className="text-gold mt-4 block not-italic font-display text-xs md:text-sm uppercase tracking-[0.4em]">1 Corinthians 13:4 | 1 കൊരിന്ത്യർ 13:4</span>
+            </div>
           </motion.div>
         </div>
       </motion.div>
