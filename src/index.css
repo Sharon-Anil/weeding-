@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-cursive: "Great Vibes", cursive;
+  --font-display: "Cinzel Decorative", serif;
+  --font-sans: "Inter", sans-serif;
+
+  --color-maroon: #2d0202;
+  --color-gold: #f5d142;
+  --color-rose-gold: #a65d67;
+  --color-ivory: #fffdf5;
+  --color-silk: #fdfaf5;
+  
+  --shadow-gold: 0 10px 30px -10px rgba(212, 175, 55, 0.3);
+}
+
+@layer base {
+  body {
+    @apply bg-silk text-maroon font-sans overflow-x-hidden antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-wider;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl;
+  }
+
+  .text-shimmer {
+    color: #f5d142; /* Fallback */
+    background: linear-gradient(
+      to right,
+      #9c7a1a 0%,
+      #f5d142 25%,
+      #fff4b5 50%,
+      #f5d142 75%,
+      #9c7a1a 100%
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 2.5s linear infinite;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.8));
+  }
+
+  @keyframes shimmer {
+    to { background-position: 200% center; }
+  }
+
+  .ken-burns {
+    animation: kenburns 30s ease infinite alternate;
+  }
+
+  @keyframes kenburns {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.2) translate(-2%, -2%); }
+  }
+
+  .gold-leaf-border {
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, #d4af37, #f8f8ff, #d4af37) 1;
+  }
+
+  .perspective-2000 {
+    perspective: 2000px;
+  }
+}
